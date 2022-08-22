@@ -13,13 +13,12 @@
 		BD5E1ADD28B2CFE6002C59C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1ADB28B2CFE6002C59C8 /* Main.storyboard */; };
 		BD5E1ADF28B2CFE7002C59C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1ADE28B2CFE7002C59C8 /* Assets.xcassets */; };
 		BD5E1AE228B2CFE7002C59C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1AE028B2CFE7002C59C8 /* LaunchScreen.storyboard */; };
-		BD5E1AED28B2CFE7002C59C8 /* AcronymFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1AEC28B2CFE7002C59C8 /* AcronymFinderTests.swift */; };
+		BD5E1AED28B2CFE7002C59C8 /* SearchAcronymsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1AEC28B2CFE7002C59C8 /* SearchAcronymsPresenterTests.swift */; };
 		BD5E1B0A28B2D14A002C59C8 /* SearchAcronymsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B0928B2D14A002C59C8 /* SearchAcronymsPresenter.swift */; };
 		BD5E1B0C28B2D171002C59C8 /* SearchAcronymsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B0B28B2D171002C59C8 /* SearchAcronymsRouter.swift */; };
 		BD5E1B0E28B2D17E002C59C8 /* SearchAcronymsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B0D28B2D17E002C59C8 /* SearchAcronymsInteractor.swift */; };
 		BD5E1B1228B2D65F002C59C8 /* HTTPRequestServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B1128B2D65F002C59C8 /* HTTPRequestServiceable.swift */; };
 		BD5E1B1928B2D672002C59C8 /* LocalizedHTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B1528B2D672002C59C8 /* LocalizedHTTPRequestError.swift */; };
-		BD5E1B1E28B2D75F002C59C8 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B1D28B2D75F002C59C8 /* Data+Extensions.swift */; };
 		BD5E1B2128B2D7B2002C59C8 /* HTTPURLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B1F28B2D7B2002C59C8 /* HTTPURLResponse+Extensions.swift */; };
 		BD5E1B2228B2D7B2002C59C8 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B2028B2D7B2002C59C8 /* URL+Extensions.swift */; };
 		BD5E1B2628B2E1C5002C59C8 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B2528B2E1C5002C59C8 /* HTTPStatusCode.swift */; };
@@ -31,6 +30,30 @@
 		BD5E1B3C28B3081A002C59C8 /* SearchAcronymsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1B3B28B3081A002C59C8 /* SearchAcronymsViewController.xib */; };
 		BD5E1B3F28B30C8B002C59C8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B3E28B30C8B002C59C8 /* UIViewController+Extensions.swift */; };
 		BD5E1B4228B31059002C59C8 /* SearchThrottler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B4128B31059002C59C8 /* SearchThrottler.swift */; };
+		BD5E1B4428B3169A002C59C8 /* SearchEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B4328B3169A002C59C8 /* SearchEmptyStateView.swift */; };
+		BD5E1B4628B31747002C59C8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B4528B31747002C59C8 /* UIView+Extensions.swift */; };
+		BD5E1B4A28B32314002C59C8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B4928B32314002C59C8 /* LoadingView.swift */; };
+		BD5E1B4D28B34478002C59C8 /* MockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B4C28B34478002C59C8 /* MockInteractor.swift */; };
+		BD5E1B5028B344BD002C59C8 /* MockSearchAcronymsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B4E28B344BC002C59C8 /* MockSearchAcronymsView.swift */; };
+		BD5E1B5128B344BD002C59C8 /* MockSearchThrottler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B4F28B344BD002C59C8 /* MockSearchThrottler.swift */; };
+		BD5E1B5428B35A04002C59C8 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B5328B35A04002C59C8 /* Array+Extensions.swift */; };
+		BD5E1B5628B36596002C59C8 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B5528B36596002C59C8 /* XCTestCase+Extensions.swift */; };
+		BD5E1B5828B36829002C59C8 /* SearchAcronymsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B5728B36829002C59C8 /* SearchAcronymsInteractorTests.swift */; };
+		BD5E1B5A28B36889002C59C8 /* MockSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B5928B36889002C59C8 /* MockSearchService.swift */; };
+		BD5E1B5C28B36B83002C59C8 /* Fullform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B5B28B36B83002C59C8 /* Fullform+Extensions.swift */; };
+		BD5E1B6228B36CBB002C59C8 /* SearchAcronymsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B5E28B36CBB002C59C8 /* SearchAcronymsViewControllerTests.swift */; };
+		BD5E1B6328B36CBB002C59C8 /* SearchAcronymsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B5F28B36CBB002C59C8 /* SearchAcronymsRouterTests.swift */; };
+		BD5E1B6828B37219002C59C8 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B6728B37219002C59C8 /* MockPresenter.swift */; };
+		BD5E1B6A28B37726002C59C8 /* MockSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B6928B37726002C59C8 /* MockSearchCell.swift */; };
+		BD5E1B6C28B37A48002C59C8 /* SearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B6B28B37A48002C59C8 /* SearchServiceTests.swift */; };
+		BD5E1B6E28B37A7F002C59C8 /* MockHTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B6D28B37A7F002C59C8 /* MockHTTPService.swift */; };
+		BD5E1B7028B387D7002C59C8 /* HTTPRequestServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B6F28B387D7002C59C8 /* HTTPRequestServiceTests.swift */; };
+		BD5E1B7228B38938002C59C8 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B7128B38938002C59C8 /* MockURLSession.swift */; };
+		BD5E1B7628B39123002C59C8 /* SearchMockResponse.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1B7428B38DC9002C59C8 /* SearchMockResponse.txt */; };
+		BD5E1B7C28B39AA7002C59C8 /* NoResults.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1B7828B39AA7002C59C8 /* NoResults.png */; };
+		BD5E1B7D28B39AA7002C59C8 /* SearchInProgress.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1B7928B39AA7002C59C8 /* SearchInProgress.png */; };
+		BD5E1B7E28B39AA7002C59C8 /* ShowResults.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1B7A28B39AA7002C59C8 /* ShowResults.png */; };
+		BD5E1B7F28B39AA7002C59C8 /* BeginsSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1B7B28B39AA7002C59C8 /* BeginsSearch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +76,12 @@
 		BD5E1AE128B2CFE7002C59C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD5E1AE328B2CFE7002C59C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD5E1AE828B2CFE7002C59C8 /* AcronymFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD5E1AEC28B2CFE7002C59C8 /* AcronymFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymFinderTests.swift; sourceTree = "<group>"; };
+		BD5E1AEC28B2CFE7002C59C8 /* SearchAcronymsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAcronymsPresenterTests.swift; sourceTree = "<group>"; };
 		BD5E1B0928B2D14A002C59C8 /* SearchAcronymsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAcronymsPresenter.swift; sourceTree = "<group>"; };
 		BD5E1B0B28B2D171002C59C8 /* SearchAcronymsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAcronymsRouter.swift; sourceTree = "<group>"; };
 		BD5E1B0D28B2D17E002C59C8 /* SearchAcronymsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAcronymsInteractor.swift; sourceTree = "<group>"; };
 		BD5E1B1128B2D65F002C59C8 /* HTTPRequestServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestServiceable.swift; sourceTree = "<group>"; };
 		BD5E1B1528B2D672002C59C8 /* LocalizedHTTPRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedHTTPRequestError.swift; sourceTree = "<group>"; };
-		BD5E1B1D28B2D75F002C59C8 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		BD5E1B1F28B2D7B2002C59C8 /* HTTPURLResponse+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extensions.swift"; sourceTree = "<group>"; };
 		BD5E1B2028B2D7B2002C59C8 /* URL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		BD5E1B2528B2E1C5002C59C8 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
@@ -71,6 +93,30 @@
 		BD5E1B3B28B3081A002C59C8 /* SearchAcronymsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAcronymsViewController.xib; sourceTree = "<group>"; };
 		BD5E1B3E28B30C8B002C59C8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		BD5E1B4128B31059002C59C8 /* SearchThrottler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchThrottler.swift; sourceTree = "<group>"; };
+		BD5E1B4328B3169A002C59C8 /* SearchEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmptyStateView.swift; sourceTree = "<group>"; };
+		BD5E1B4528B31747002C59C8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		BD5E1B4928B32314002C59C8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		BD5E1B4C28B34478002C59C8 /* MockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractor.swift; sourceTree = "<group>"; };
+		BD5E1B4E28B344BC002C59C8 /* MockSearchAcronymsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchAcronymsView.swift; sourceTree = "<group>"; };
+		BD5E1B4F28B344BD002C59C8 /* MockSearchThrottler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchThrottler.swift; sourceTree = "<group>"; };
+		BD5E1B5328B35A04002C59C8 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		BD5E1B5528B36596002C59C8 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
+		BD5E1B5728B36829002C59C8 /* SearchAcronymsInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAcronymsInteractorTests.swift; sourceTree = "<group>"; };
+		BD5E1B5928B36889002C59C8 /* MockSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchService.swift; sourceTree = "<group>"; };
+		BD5E1B5B28B36B83002C59C8 /* Fullform+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fullform+Extensions.swift"; sourceTree = "<group>"; };
+		BD5E1B5E28B36CBB002C59C8 /* SearchAcronymsViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAcronymsViewControllerTests.swift; sourceTree = "<group>"; };
+		BD5E1B5F28B36CBB002C59C8 /* SearchAcronymsRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAcronymsRouterTests.swift; sourceTree = "<group>"; };
+		BD5E1B6728B37219002C59C8 /* MockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresenter.swift; sourceTree = "<group>"; };
+		BD5E1B6928B37726002C59C8 /* MockSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSearchCell.swift; sourceTree = "<group>"; };
+		BD5E1B6B28B37A48002C59C8 /* SearchServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchServiceTests.swift; sourceTree = "<group>"; };
+		BD5E1B6D28B37A7F002C59C8 /* MockHTTPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHTTPService.swift; sourceTree = "<group>"; };
+		BD5E1B6F28B387D7002C59C8 /* HTTPRequestServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestServiceTests.swift; sourceTree = "<group>"; };
+		BD5E1B7128B38938002C59C8 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		BD5E1B7428B38DC9002C59C8 /* SearchMockResponse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchMockResponse.txt; sourceTree = "<group>"; };
+		BD5E1B7828B39AA7002C59C8 /* NoResults.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoResults.png; sourceTree = "<group>"; };
+		BD5E1B7928B39AA7002C59C8 /* SearchInProgress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchInProgress.png; sourceTree = "<group>"; };
+		BD5E1B7A28B39AA7002C59C8 /* ShowResults.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShowResults.png; sourceTree = "<group>"; };
+		BD5E1B7B28B39AA7002C59C8 /* BeginsSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BeginsSearch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +171,15 @@
 		BD5E1AEB28B2CFE7002C59C8 /* AcronymFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD5E1AEC28B2CFE7002C59C8 /* AcronymFinderTests.swift */,
+				BD5E1B6F28B387D7002C59C8 /* HTTPRequestServiceTests.swift */,
+				BD5E1B6B28B37A48002C59C8 /* SearchServiceTests.swift */,
+				BD5E1B5F28B36CBB002C59C8 /* SearchAcronymsRouterTests.swift */,
+				BD5E1B5E28B36CBB002C59C8 /* SearchAcronymsViewControllerTests.swift */,
+				BD5E1AEC28B2CFE7002C59C8 /* SearchAcronymsPresenterTests.swift */,
+				BD5E1B5728B36829002C59C8 /* SearchAcronymsInteractorTests.swift */,
+				BD5E1B5228B359EE002C59C8 /* Extensions */,
+				BD5E1B4B28B34455002C59C8 /* Mocks */,
+				BD5E1B7328B38DB6002C59C8 /* Resources */,
 			);
 			path = AcronymFinderTests;
 			sourceTree = "<group>";
@@ -164,6 +218,8 @@
 		BD5E1B0828B2D0A9002C59C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BD5E1B7728B39A98002C59C8 /* Screenshots */,
+				BD5E1B7428B38DC9002C59C8 /* SearchMockResponse.txt */,
 				BD5E1ADE28B2CFE7002C59C8 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -201,7 +257,6 @@
 			children = (
 				BD5E1B2028B2D7B2002C59C8 /* URL+Extensions.swift */,
 				BD5E1B1F28B2D7B2002C59C8 /* HTTPURLResponse+Extensions.swift */,
-				BD5E1B1D28B2D75F002C59C8 /* Data+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +310,8 @@
 				BD5E1AD928B2CFE6002C59C8 /* SearchAcronymsViewController.swift */,
 				BD5E1B3B28B3081A002C59C8 /* SearchAcronymsViewController.xib */,
 				BD5E1B3428B305CC002C59C8 /* SearchResultCell.swift */,
+				BD5E1B4328B3169A002C59C8 /* SearchEmptyStateView.swift */,
+				BD5E1B4928B32314002C59C8 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,8 +345,52 @@
 			isa = PBXGroup;
 			children = (
 				BD5E1B3E28B30C8B002C59C8 /* UIViewController+Extensions.swift */,
+				BD5E1B4528B31747002C59C8 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BD5E1B4B28B34455002C59C8 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1B7128B38938002C59C8 /* MockURLSession.swift */,
+				BD5E1B6D28B37A7F002C59C8 /* MockHTTPService.swift */,
+				BD5E1B6928B37726002C59C8 /* MockSearchCell.swift */,
+				BD5E1B6728B37219002C59C8 /* MockPresenter.swift */,
+				BD5E1B5928B36889002C59C8 /* MockSearchService.swift */,
+				BD5E1B4E28B344BC002C59C8 /* MockSearchAcronymsView.swift */,
+				BD5E1B4F28B344BD002C59C8 /* MockSearchThrottler.swift */,
+				BD5E1B4C28B34478002C59C8 /* MockInteractor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BD5E1B5228B359EE002C59C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1B5B28B36B83002C59C8 /* Fullform+Extensions.swift */,
+				BD5E1B5528B36596002C59C8 /* XCTestCase+Extensions.swift */,
+				BD5E1B5328B35A04002C59C8 /* Array+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BD5E1B7328B38DB6002C59C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD5E1B7728B39A98002C59C8 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1B7B28B39AA7002C59C8 /* BeginsSearch.png */,
+				BD5E1B7828B39AA7002C59C8 /* NoResults.png */,
+				BD5E1B7928B39AA7002C59C8 /* SearchInProgress.png */,
+				BD5E1B7A28B39AA7002C59C8 /* ShowResults.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,10 +474,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5E1B7F28B39AA7002C59C8 /* BeginsSearch.png in Resources */,
 				BD5E1B3C28B3081A002C59C8 /* SearchAcronymsViewController.xib in Resources */,
+				BD5E1B7C28B39AA7002C59C8 /* NoResults.png in Resources */,
+				BD5E1B7628B39123002C59C8 /* SearchMockResponse.txt in Resources */,
 				BD5E1AE228B2CFE7002C59C8 /* LaunchScreen.storyboard in Resources */,
 				BD5E1ADF28B2CFE7002C59C8 /* Assets.xcassets in Resources */,
+				BD5E1B7E28B39AA7002C59C8 /* ShowResults.png in Resources */,
 				BD5E1ADD28B2CFE6002C59C8 /* Main.storyboard in Resources */,
+				BD5E1B7D28B39AA7002C59C8 /* SearchInProgress.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,10 +500,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5E1B4628B31747002C59C8 /* UIView+Extensions.swift in Sources */,
 				BD5E1ADA28B2CFE6002C59C8 /* SearchAcronymsViewController.swift in Sources */,
 				BD5E1AD628B2CFE6002C59C8 /* AppDelegate.swift in Sources */,
+				BD5E1B4A28B32314002C59C8 /* LoadingView.swift in Sources */,
+				BD5E1B4428B3169A002C59C8 /* SearchEmptyStateView.swift in Sources */,
 				BD5E1B2128B2D7B2002C59C8 /* HTTPURLResponse+Extensions.swift in Sources */,
-				BD5E1B1E28B2D75F002C59C8 /* Data+Extensions.swift in Sources */,
 				BD5E1B3F28B30C8B002C59C8 /* UIViewController+Extensions.swift in Sources */,
 				BD5E1B2628B2E1C5002C59C8 /* HTTPStatusCode.swift in Sources */,
 				BD5E1B0E28B2D17E002C59C8 /* SearchAcronymsInteractor.swift in Sources */,
@@ -420,7 +528,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD5E1AED28B2CFE7002C59C8 /* AcronymFinderTests.swift in Sources */,
+				BD5E1B6E28B37A7F002C59C8 /* MockHTTPService.swift in Sources */,
+				BD5E1B6228B36CBB002C59C8 /* SearchAcronymsViewControllerTests.swift in Sources */,
+				BD5E1B6C28B37A48002C59C8 /* SearchServiceTests.swift in Sources */,
+				BD5E1B5828B36829002C59C8 /* SearchAcronymsInteractorTests.swift in Sources */,
+				BD5E1B7228B38938002C59C8 /* MockURLSession.swift in Sources */,
+				BD5E1B5128B344BD002C59C8 /* MockSearchThrottler.swift in Sources */,
+				BD5E1B7028B387D7002C59C8 /* HTTPRequestServiceTests.swift in Sources */,
+				BD5E1B5428B35A04002C59C8 /* Array+Extensions.swift in Sources */,
+				BD5E1B6A28B37726002C59C8 /* MockSearchCell.swift in Sources */,
+				BD5E1B6828B37219002C59C8 /* MockPresenter.swift in Sources */,
+				BD5E1B5C28B36B83002C59C8 /* Fullform+Extensions.swift in Sources */,
+				BD5E1B5A28B36889002C59C8 /* MockSearchService.swift in Sources */,
+				BD5E1B4D28B34478002C59C8 /* MockInteractor.swift in Sources */,
+				BD5E1B5028B344BD002C59C8 /* MockSearchAcronymsView.swift in Sources */,
+				BD5E1B6328B36CBB002C59C8 /* SearchAcronymsRouterTests.swift in Sources */,
+				BD5E1B5628B36596002C59C8 /* XCTestCase+Extensions.swift in Sources */,
+				BD5E1AED28B2CFE7002C59C8 /* SearchAcronymsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,7 @@ struct SearchService: SearchServicable {
         self.httpService = httpService
     }
     
+    /// Searches for meaning of given Acronym.
     func searchForAcronym(_ acronymText: String) async throws -> SearchResponse {
         guard let url = URL(string: "http://www.nactem.ac.uk/software/acromine/dictionary.py") else {
             throw HTTPError.invalidURL

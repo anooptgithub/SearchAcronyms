@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// HTTP protocol for dependency injection and mocking
 protocol HTTPRequestServiceable {
     func get<ResponseObject: Decodable>(
         url: URL,

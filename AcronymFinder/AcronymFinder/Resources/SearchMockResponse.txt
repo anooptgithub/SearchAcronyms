@@ -1,0 +1,15 @@
+[
+  {
+    "sf": "SSS",
+    "lfs": [
+      {
+        "lf": "sick sinus syndrome",
+        "since": 1975
+      },
+      {
+        "lf": "superior sagittal sinus",
+        "since": 1976
+      }
+    ]
+  }
+]

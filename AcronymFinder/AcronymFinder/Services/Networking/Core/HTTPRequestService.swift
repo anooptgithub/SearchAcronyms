@@ -7,10 +7,23 @@
 
 import Foundation
 
+// Concrete implementation of HTTPRequestServiceable
+
+protocol URLSessionable {
+    func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse)
+}
+
+extension URLSession: URLSessionable {}
+
 class HTTPRequestService: HTTPRequestServiceable {
 
-    private let session: URLSession = .shared
+    let session: URLSessionable
     
+    init(session: URLSessionable = URLSession.shared) {
+        self.session = session
+    }
+    
+    /// Use this for getting data from a GET HTTP endpoint
     func get<ResponseModel: Decodable>(
         url: URL,
         queryParameters: [String: Any]? = [:]
@@ -25,7 +38,7 @@ class HTTPRequestService: HTTPRequestServiceable {
     }
 }
 
-private extension HTTPRequestService {
+extension HTTPRequestService {
     func makeURLRequest(url: URL) async -> URLRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
@@ -34,8 +47,9 @@ private extension HTTPRequestService {
         return urlRequest
     }
 
-    func data(from urlRequest: URLRequest) async throws -> Data {
-        let (data, response) = try await session.data(for: urlRequest)
+    /// Gets data from API using the URLRequest
+    private func data(from urlRequest: URLRequest) async throws -> Data {
+        let (data, response) = try await session.data(for: urlRequest, delegate: nil)
        
         guard let httpResponse = response as? HTTPURLResponse else {
             throw LocalizedHTTPRequestError.unexpectedURLResponse

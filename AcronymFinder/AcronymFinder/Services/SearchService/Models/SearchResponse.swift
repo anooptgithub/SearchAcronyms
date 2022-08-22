@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Search response model for API
+
 struct SearchResponse: Codable {
     let fullForms: [Fullform]
     

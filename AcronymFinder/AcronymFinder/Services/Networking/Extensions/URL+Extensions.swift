@@ -23,17 +23,18 @@ extension URL {
 }
 
 private extension URL {
+    /// Converts the doctionary of parameters to a URL encoded string representation.
     func makeEncodedStringForParameters(_ parameters: [String: Any]) -> String {
         var components: [(String, String)] = []
 
         for key in parameters.keys.sorted(by: <) {
             let value = parameters[key]!
-            components.append((queryEncode(key), queryEncode("\(value)")))
+            components.append((urlEncode(key), urlEncode("\(value)")))
         }
         return components.map { "\($0)=\($1)" }.joined(separator: "&")
     }
 
-    func queryEncode(_ string: String) -> String {
+    func urlEncode(_ string: String) -> String {
         let generalDelimitersToEncode = ":#[]@"
         let subDelimitersToEncode = "!$&'()*+,;="
         var allowedCharacterSet = CharacterSet.urlQueryAllowed

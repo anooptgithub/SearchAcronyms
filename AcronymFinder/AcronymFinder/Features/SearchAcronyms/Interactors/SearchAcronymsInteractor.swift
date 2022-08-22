@@ -11,6 +11,7 @@ protocol SearchAcronymsInteractable {
     func searchForAcronym(_ acronymText: String) async throws -> [Fullform]
 }
 
+// Data handling for Search experience
 struct SearchAcronymsInteractor: SearchAcronymsInteractable {
     
     let service: SearchServicable

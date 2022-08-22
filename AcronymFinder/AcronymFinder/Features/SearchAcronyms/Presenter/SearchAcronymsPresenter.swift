@@ -17,11 +17,11 @@ final class SearchAcronymsPresenter: SearchAcronymsPresentable {
     
     let interactor: SearchAcronymsInteractable
     let throller: SearchThrottlable
-    weak var view: SearchAcronymsViewing!
+    weak var view: SearchAcronymsViewable!
     private(set) var searchResults: [SearchResultCellViewModel] = []
     
     init(
-        view: SearchAcronymsViewing,
+        view: SearchAcronymsViewable,
         interactor: SearchAcronymsInteractable,
         throller: SearchThrottlable
     ) {
@@ -31,29 +31,33 @@ final class SearchAcronymsPresenter: SearchAcronymsPresentable {
     }
     
     func userDidSearchText(_ text: String) {
-        // Throttles searching when user is typing fast
-        // to avoid unecessary API calls
+        view.setupViewState(text.isEmpty ? .beginSearch : .searchInProgress)
+        
+        // Throttles searching when user is typing fast to avoid unecessary API calls
         throller.searchTextChanged(text) { [weak self] in
+            guard text.isEmpty == false else { return }
             self?.searchAndUpdateUI(text)
         }
     }
 }
 
 private extension SearchAcronymsPresenter {
+    
+    /// Searches and loads the results to UI
     func searchAndUpdateUI(_ acronymText: String) {
-        view.showLoadingState()
+        view.setupViewState(.searchInProgress)
         Task {
             do {
                 let result  = try await interactor.searchForAcronym(acronymText)
                 searchResults = result.map {
-                    SearchResultCellViewModel(titleText: $0.text.capitalized, detailText: "Since \($0.since)")
+                    SearchResultCellViewModel(titleText: $0.text.capitalized, detailText: "Coined in \($0.since)")
                 }
                 view.reloadData()
+                view.setupViewState(searchResults.count > 0 ? .showResults : .noResults)
             } catch {
                 print(error.localizedDescription)
+                view.setupViewState(.noResults)
             }
-            
-            view.hideLoadingState()
         }
     }
 }

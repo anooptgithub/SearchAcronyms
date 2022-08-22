@@ -7,11 +7,10 @@
 
 import UIKit
 
-final class SearchResultCell: UITableViewCell {
+class SearchResultCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-        
         textLabel?.font = .preferredFont(forTextStyle: .headline)
         textLabel?.numberOfLines = 0
         textLabel?.lineBreakMode = .byWordWrapping

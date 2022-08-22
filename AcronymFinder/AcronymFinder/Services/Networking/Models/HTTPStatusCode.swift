@@ -102,19 +102,19 @@ extension HTTPStatusCode {
 
     enum Category {
 
-        /// 1XX: An informational response indicates that the request was received and understood.
+        // 1XX: An informational response indicates that the request was received and understood.
         case informational
 
-        /// 2XX: Indicates the action requested by the client was received, understood, and accepted.
+        // 2XX: Indicates the action requested by the client was received, understood, and accepted.
         case success
 
-        /// 3XX: Indicates the client must take additional action to complete the request.
+        // 3XX: Indicates the client must take additional action to complete the request.
         case redirection
 
-        /// 4XX: Intended for situations in which the error seems to have been caused by the client.
+        // 4XX: Intended for situations in which the error seems to have been caused by the client.
         case clientError
 
-        /// 5XX: The server failed to fulfill a request
+        // 5XX: The server failed to fulfill a request
         case serverError
     }
 }

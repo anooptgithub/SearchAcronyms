@@ -7,6 +7,8 @@
 
 import Foundation
 
+// HTTP Errors representations, localized.
+
 enum HTTPError: Error {
     case invalidURL
 }
