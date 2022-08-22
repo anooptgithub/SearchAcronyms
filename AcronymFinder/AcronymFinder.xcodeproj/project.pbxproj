@@ -26,6 +26,11 @@
 		BD5E1B2828B2E37D002C59C8 /* HTTPRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B2728B2E37D002C59C8 /* HTTPRequestService.swift */; };
 		BD5E1B2C28B2F38D002C59C8 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B2B28B2F38D002C59C8 /* SearchService.swift */; };
 		BD5E1B2F28B2F482002C59C8 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B2E28B2F482002C59C8 /* SearchResponse.swift */; };
+		BD5E1B3128B3022A002C59C8 /* SearchResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B3028B3022A002C59C8 /* SearchResultCellViewModel.swift */; };
+		BD5E1B3528B305CC002C59C8 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B3428B305CC002C59C8 /* SearchResultCell.swift */; };
+		BD5E1B3C28B3081A002C59C8 /* SearchAcronymsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5E1B3B28B3081A002C59C8 /* SearchAcronymsViewController.xib */; };
+		BD5E1B3F28B30C8B002C59C8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B3E28B30C8B002C59C8 /* UIViewController+Extensions.swift */; };
+		BD5E1B4228B31059002C59C8 /* SearchThrottler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E1B4128B31059002C59C8 /* SearchThrottler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 		BD5E1B2728B2E37D002C59C8 /* HTTPRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestService.swift; sourceTree = "<group>"; };
 		BD5E1B2B28B2F38D002C59C8 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		BD5E1B2E28B2F482002C59C8 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		BD5E1B3028B3022A002C59C8 /* SearchResultCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCellViewModel.swift; sourceTree = "<group>"; };
+		BD5E1B3428B305CC002C59C8 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		BD5E1B3B28B3081A002C59C8 /* SearchAcronymsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAcronymsViewController.xib; sourceTree = "<group>"; };
+		BD5E1B3E28B30C8B002C59C8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		BD5E1B4128B31059002C59C8 /* SearchThrottler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchThrottler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +152,11 @@
 		BD5E1B0728B2D094002C59C8 /* SearchAcronyms */ = {
 			isa = PBXGroup;
 			children = (
-				BD5E1AD928B2CFE6002C59C8 /* SearchAcronymsViewController.swift */,
-				BD5E1B0D28B2D17E002C59C8 /* SearchAcronymsInteractor.swift */,
-				BD5E1B0928B2D14A002C59C8 /* SearchAcronymsPresenter.swift */,
-				BD5E1B0B28B2D171002C59C8 /* SearchAcronymsRouter.swift */,
+				BD5E1B3328B30562002C59C8 /* Views */,
+				BD5E1B3828B30793002C59C8 /* Interactors */,
+				BD5E1B3928B307AC002C59C8 /* Presenter */,
+				BD5E1B3A28B307B5002C59C8 /* Router */,
+				BD5E1B3228B302AB002C59C8 /* ViewModels */,
 			);
 			path = SearchAcronyms;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 		BD5E1B1B28B2D6AA002C59C8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BD5E1B3D28B30C7B002C59C8 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -227,6 +239,57 @@
 				BD5E1B2E28B2F482002C59C8 /* SearchResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BD5E1B3228B302AB002C59C8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1B3028B3022A002C59C8 /* SearchResultCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BD5E1B3328B30562002C59C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1AD928B2CFE6002C59C8 /* SearchAcronymsViewController.swift */,
+				BD5E1B3B28B3081A002C59C8 /* SearchAcronymsViewController.xib */,
+				BD5E1B3428B305CC002C59C8 /* SearchResultCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD5E1B3828B30793002C59C8 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1B0D28B2D17E002C59C8 /* SearchAcronymsInteractor.swift */,
+				BD5E1B4128B31059002C59C8 /* SearchThrottler.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		BD5E1B3928B307AC002C59C8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1B0928B2D14A002C59C8 /* SearchAcronymsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD5E1B3A28B307B5002C59C8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1B0B28B2D171002C59C8 /* SearchAcronymsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BD5E1B3D28B30C7B002C59C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E1B3E28B30C8B002C59C8 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5E1B3C28B3081A002C59C8 /* SearchAcronymsViewController.xib in Resources */,
 				BD5E1AE228B2CFE7002C59C8 /* LaunchScreen.storyboard in Resources */,
 				BD5E1ADF28B2CFE7002C59C8 /* Assets.xcassets in Resources */,
 				BD5E1ADD28B2CFE6002C59C8 /* Main.storyboard in Resources */,
@@ -334,8 +398,12 @@
 				BD5E1AD628B2CFE6002C59C8 /* AppDelegate.swift in Sources */,
 				BD5E1B2128B2D7B2002C59C8 /* HTTPURLResponse+Extensions.swift in Sources */,
 				BD5E1B1E28B2D75F002C59C8 /* Data+Extensions.swift in Sources */,
+				BD5E1B3F28B30C8B002C59C8 /* UIViewController+Extensions.swift in Sources */,
 				BD5E1B2628B2E1C5002C59C8 /* HTTPStatusCode.swift in Sources */,
 				BD5E1B0E28B2D17E002C59C8 /* SearchAcronymsInteractor.swift in Sources */,
+				BD5E1B3528B305CC002C59C8 /* SearchResultCell.swift in Sources */,
+				BD5E1B4228B31059002C59C8 /* SearchThrottler.swift in Sources */,
+				BD5E1B3128B3022A002C59C8 /* SearchResultCellViewModel.swift in Sources */,
 				BD5E1B1228B2D65F002C59C8 /* HTTPRequestServiceable.swift in Sources */,
 				BD5E1B2828B2E37D002C59C8 /* HTTPRequestService.swift in Sources */,
 				BD5E1B0A28B2D14A002C59C8 /* SearchAcronymsPresenter.swift in Sources */,
